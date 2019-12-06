@@ -1,0 +1,28 @@
+---
+title: "Ejercicio Eficiencia y Productividad"
+author: "Mateo Barletta"
+date: "6/12/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(tidyverse)
+library(Benchmarking)
+library(readxl)
+```
+
+## Introducción
+El ejercicio busca estimar la eficiencia en la educación secundaria uruguaya. El análisis se realizará a través de los resultados de las pruebas PISA, a nivel de centro educativo.
+Es un enfoque primario ya que no se utilizan el precio de las variables.
+
+## Variables relevantes
+Nuestra variable de interés (*Output*) será el desempeño educativo. Las variables explicativas (*Inputs*) a nivel teórico podrían ser: la inversión por estudiante, el tamaño de la clase, el tamaño de la institución y variables de contexto sociodemográficas (*Environment*): como el barrio del instituto, el barrio de los alumnos, el nivel educativo alcanzado por las familias y el nivel de ingreso.
+
+## Retornos a escala
+A priori no podemos suponer sobre los retornos a escala ya que existen varias bibliotecas al respecto. Por ejemplo si consideramos el gasto por alumno, se podría pensar que existen varios escalones: un primer escalón de un gasto mínimo por estudiante, en donde los retornos son crecientes, un nivel estable del gasto con retornos constantes, y un nivel de gasto muy alto en donde vemos rendimientos decrecientes a escala.
+
+## Modelo
+Propongo usar un modelo estándar de DEA con retornos crecientesa escala
+
